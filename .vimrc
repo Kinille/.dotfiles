@@ -8,3 +8,5 @@ inoremap {;<CR> {<CR>};<ESC>O
 set autoindent
 set shiftwidth=4
 set tabstop=4
+" Set wrapping settings
+set wrap
