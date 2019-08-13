@@ -8,3 +8,10 @@ alias ls='ls -Isnap --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+#Function for making a directory then moving into it
+mkcd ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
