@@ -1,0 +1,9 @@
+#/bin/bash
+
+STATE=`wemo -h 192.168.3.120 -a GETSTATE`
+TESTOFF=$'OFF'
+if [ "$STATE" = "$TESTOFF" ]; then
+	wemo -h 192.168.3.120 -a ON > /dev/null
+else
+	wemo -h 192.168.3.120 -a OFF > /dev/null
+fi

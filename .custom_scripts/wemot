@@ -1,0 +1,16 @@
+#/bin/bash 
+
+TESTOFF=$'OFF'
+TESTON=$'ON'
+#Sets IP equal to first argument of command
+IP="192.168.3.$1"
+
+STATE=`wemo -h $IP -a GETSTATE`
+if [ "$STATE" = "$TESTOFF" ]; then
+	wemo -h $IP -a ON > /dev/null
+elif [ "$STATE" = "$TESTON" ]; then
+	wemo -h $IP -a OFF > /dev/null
+else
+	echo "You done made an ERROR son"
+	echo "There probabaly isn't a switch at that address location"
+fi
