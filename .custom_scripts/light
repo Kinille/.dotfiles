@@ -1,9 +1,12 @@
-#/bin/bash
+#!/bin/bash
 
 STATE=`wemo -h 192.168.3.120 -a GETSTATE`
 TESTOFF=$'OFF'
+TESTON=$'ON'
 if [ "$STATE" = "$TESTOFF" ]; then
 	wemo -h 192.168.3.120 -a ON > /dev/null
-else
+elif [ "$STATE" = "$TESTON" ]; then
 	wemo -h 192.168.3.120 -a OFF > /dev/null
+else
+	echo "you made a mistake"
 fi
