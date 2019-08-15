@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#nmap for ports 49153 in network. Outputs as list of IPS
+IPS=`nmap -p 49153 192.168.3.101-150 -oG - | awk '/49153\/open/ {print $2}'`
+
+#Sets the bash line seperator for some reason (don't even know when I made it) This somehow resets the output to be workable
+IFS=$' '
+TEST=($(echo $IPS))
+
+#Create array of valid ips accepting wemo-like requests
+mapfile -t IPAR < <( echo ${TEST[0]} )
+
+#loops through ips and outputs the ip and its result from the wemo "GETNAME" and "GETSTATE" Commands
+for i in "${IPAR[@]}"; do
+	NAME=`wemo -h $i -a GETNAME`
+	STATE=`wemo -h $i -a GETSTATE`
+	if [ "$STATE" = "ON" ]; then
+		STATE="ON "
+	fi
+	echo -n "$i ----- "; echo -n "$STATE ------ "; echo $NAME
+done
