@@ -15,3 +15,6 @@ mkcd ()
     mkdir -p -- "$1" &&
       cd -P -- "$1"
 }
+
+#For a relaxing bash experience
+alias please='sudo'
