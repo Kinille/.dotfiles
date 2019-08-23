@@ -93,9 +93,8 @@ bindsym $mod+a focus parent
 #Set workspace name variables
 set $workspace1 "1:"
 set $workspace2 "2:"
-set $workspace3 "3:"
-set $workspace4 "4:"
-set $workspace8 "8:"
+set $workspace3 "3:"
+set $workspace8 "8:"
 set $workspace9 "9:"
 set $workspace10 "10:"
 
@@ -103,7 +102,7 @@ set $workspace10 "10:"
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
+bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -115,7 +114,7 @@ bindsym $mod+0 workspace $workspace10
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -124,9 +123,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # Set default program workspace locations
-assign [class="Firefox"] $workspace1
 assign [class="discord"] $workspace3
-assign [class="Mailspring"] $workspace8
 assign [class="Rhythmbox"] $workspace10
 
 # reload the configuration file
@@ -199,13 +196,14 @@ bar {
 bindsym $mod+shift+x exec i3lock --color "$dark-bar"
 bindsym Control+Menu exec ~/.custom_scripts/light
 bindsym $mod+d exec dmenu_run
+bindsym $mod+Delete exec "i3lock --color '$dark-bar' --show-failed-attempt; systemctl suspend"
 
-exec --no-startup-id i3-msg '$workspace1; exec firefox'
-exec --no-startup-id i3-msg '$workspace2; exec gnome-terminal'
-exec --no-startup-id i3-msg '$workspace3; exec discord'
-exec --no-startup-id i3-msg '$workspace8; exec mailspring'
-exec --no-startup-id i3-msg '$workspace9; exec nautilus'
-exec --no-startup-id i3-msg '$workspace10; exec rhythmbox'
+exec --no-startup-id i3-msg 'workspace $workspace1; exec firefox'
+exec --no-startup-id i3-msg 'workspace $workspace2; exec gnome-terminal'
+#exec --no-startup-id i3-msg 'workspace $workspace3; exec discord'
+#exec --no-startup-id i3-msg 'workspace $workspace8; exec mailspring'
+exec --no-startup-id i3-msg 'workspace $workspace9; exec nautilus'
+exec --no-startup-id i3-msg 'workspace $workspace10; exec rhythmbox'
 
 
 exec_always compton -f
