@@ -205,5 +205,7 @@ exec --no-startup-id i3-msg 'workspace $workspace2; exec gnome-terminal'
 exec --no-startup-id i3-msg 'workspace $workspace9; exec nautilus'
 exec --no-startup-id i3-msg 'workspace $workspace10; exec rhythmbox'
 
-
+# Set wallpaper
+exec_always feh --randomize --bg-scale /home/kinille/Pictures/Backgrounds/
+# Set workspace transition effect
 exec_always compton -f

@@ -12,6 +12,9 @@ alias l='ls -CF'
 # Default to Python 3
 alias python='python3'
 
+# Check VPN status
+alias ins='nordvpn status'
+
 # Function for making a directory then moving into it
 mkcd ()
 {
