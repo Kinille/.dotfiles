@@ -1,0 +1,7 @@
+This file is to be used to remind myself of the correct terminal commands and their usages
+The idea is that if I cant remember the command for something, I can simply grep this file for keywords to obtain the command
+
+zbarimg <filename> ### qr ; qrcode ; code ### Used to scan an image for qr code data
+ins ### nordvpn; status ### self made shortcut to see status of vpn connection
+<command> ; alert ### alert; alarm ### notification when <command> is complete. Optionally no sound with alertn
+nmcli ### ipconfig; ifconfig; network; ip ### displays current network information
