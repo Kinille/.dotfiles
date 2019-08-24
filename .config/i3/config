@@ -123,7 +123,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # Set default program workspace locations
-assign [class="discord"] $workspace3
+assign [class="discord"] $workspace8
 assign [class="Rhythmbox"] $workspace10
 
 # reload the configuration file
