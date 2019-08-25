@@ -22,6 +22,12 @@ mkcd ()
       cd -P -- "$1"
 }
 
+# Function to move into a directory and immediately list its contents
+cs ()
+{
+	cd "$@" &&
+	ls
+}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
