@@ -5,3 +5,4 @@ zbarimg <filename> ### qr ; qrcode ; code ### Used to scan an image for qr code 
 ins ### nordvpn; status ### self made shortcut to see status of vpn connection
 <command> ; alert ### alert; alarm ### notification when <command> is complete. Optionally no sound with alertn
 nmcli ### ipconfig; ifconfig; network; ip ### displays current network information
+xprop ### properties; window; class ### display window or fond properties of selection
