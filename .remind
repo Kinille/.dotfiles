@@ -8,3 +8,4 @@ nmcli ### ipconfig; ifconfig; network; ip ### displays current network informati
 xprop ### properties; window; class ### display window or fond properties of selection
 gocr ### character recognition; ocr; read ### parses pictures for text
 ps aux ### processes; list; pid ### lists running processes with their pid
+ides ### caesar; rotation; cipher ### breaks rotations 1 through 25
