@@ -1,0 +1,6 @@
+#!/bin/bash
+# named for the ides of march, because this cracks the caesar and rotation cipher
+# requires bsdgames package
+
+# loop through all 25 alternatate rotations
+for i in {1..25}; do echo $1 | caesar $i; done;
