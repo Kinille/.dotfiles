@@ -6,3 +6,5 @@ ins ### nordvpn; status ### self made shortcut to see status of vpn connection
 <command> ; alert ### alert; alarm ### notification when <command> is complete. Optionally no sound with alertn
 nmcli ### ipconfig; ifconfig; network; ip ### displays current network information
 xprop ### properties; window; class ### display window or fond properties of selection
+gocr ### character recognition; ocr; read ### parses pictures for text
+ps aux ### processes; list; pid ### lists running processes with their pid
