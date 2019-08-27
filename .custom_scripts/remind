@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# set a variable for the remind search
+QUERY=$1
+
+# search .remind file for the given text
+cat ~/.remind | grep $1 --color=auto
