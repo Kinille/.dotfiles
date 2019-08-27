@@ -32,9 +32,11 @@ cs ()
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='paplay /usr/share/sounds/freedesktop/stereo/complete.oga && notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alert with no sound
 alias alertn='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # For a relaxing bash experience
 alias please='sudo'
+
+# Randomize background
+alias newbg='feh --randomize --bg-scale ~/Pictures/Backgrounds/'
