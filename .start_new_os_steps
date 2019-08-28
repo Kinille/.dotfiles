@@ -1,0 +1,42 @@
+CHANGE THESE SETTINGS:
+Natural scrolling = disabled
+
+PACKAGES FOR I3:
+feh
+compton
+
+INSTALL THESE PACKAGES:
+vim, vim-gtk
+NordVPN
+I3
+KeePass2
+Discord
+mailspring (snap install mailspring)
+npm (primarally for wemo)
+wemo (npm install -g belkin-wemo-command-line-tools)
+Curl
+nmap
+keepass2
+vlc
+rhythmbox
+network-manager
+
+CTF TOOLS:
+peda for gdb
+python3-pip
+pwntools for python (pip install pwntools)
+radare2
+John
+zbar-tools
+stegsolver.jar (default-jre openjdk-11-jre-headless openjdk-8-jre-headless)
+exif
+bsdgames
+wireshark
+
+MISC:
+auto use ssh key for access to github
+	dotfiles remote set-url origin git@github.com:Kinille/.dotfiles
+Add pm-utils package and configure background randomization optionally
+	Add script to /usr/lib/pm-utils/sleep.d/
+	make sure user can use sudoers pm-suspend
+	otherwise change ~/.config/i3/config to have "systemctl suspend" instead of pm-suspend
