@@ -196,7 +196,7 @@ bar {
 bindsym $mod+shift+x exec i3lock --color "$dark-bar"
 bindsym Control+Menu exec ~/.custom_scripts/light
 bindsym $mod+d exec dmenu_run
-bindsym $mod+Delete exec "i3lock --color '$dark-bar' --show-failed-attempt; systemctl suspend"
+bindsym $mod+Delete exec "i3lock --color '$dark-bar' --show-failed-attempt;  sudo pm-suspend"
 
 exec --no-startup-id i3-msg 'workspace $workspace1; exec firefox'
 exec --no-startup-id i3-msg 'workspace $workspace2; exec gnome-terminal'
