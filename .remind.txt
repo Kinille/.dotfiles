@@ -4,6 +4,7 @@ The idea is that if I cant remember the command for something, I can simply grep
 zbarimg <filename> ### qr ; qrcode ; code ### Used to scan an image for qr code data
 ins ### nordvpn; status ### self made shortcut to see status of vpn connection
 <command> ; alert ### alert; alarm ### notification when <command> is complete. Optionally no sound with alertn
+locate <filename> ### find; where ### prints the paths with that filename. Might need updatedb
 nmcli ### ipconfig; ifconfig; network; ip ### displays current network information
 xprop ### properties; window; class ### display window or fond properties of selection
 gocr ### character recognition; ocr; read ### parses pictures for text
