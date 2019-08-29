@@ -17,3 +17,6 @@ set wrap!
 " Make cursor a | when in insert mode
 au InsertEnter * silent execute "!echo -en \<esc>[5 q"
 au InsertLeave * silent execute "!echo -en \<esc>[2 q"
+
+" Merge the system clipboard registers (make python use plus register)
+set clipboard=unnamedplus
