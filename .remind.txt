@@ -5,8 +5,9 @@ zbarimg <filename> ### qr ; qrcode ; code ### Used to scan an image for qr code 
 ins ### nordvpn; status ### self made shortcut to see status of vpn connection
 <command> ; alert ### alert; alarm ### notification when <command> is complete. Optionally no sound with alertn
 locate <filename> ### find; where ### prints the paths with that filename. Might need updatedb
-nmcli ### ipconfig; ifconfig; network; ip ### displays current network information
+nmcli ### ipconfig; ifconfig; network; ip ### displays current network card status
 xprop ### properties; window; class ### display window or fond properties of selection
 gocr ### character recognition; ocr; read ### parses pictures for text
 ps aux ### processes; list; pid ### lists running processes with their pid
 ides ### caesar; rotation; cipher ### breaks rotations 1 through 25
+apt-cache show <package> ### information; package ### shows information about package before installing

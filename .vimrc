@@ -22,7 +22,7 @@ au InsertLeave * silent execute "!echo -en \<esc>[2 q"
 set clipboard=unnamedplus
 
 " Set <F9> to run python script within vim
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 
 " auto add shebang when creating a python script
 autocmd BufNewFile *.py norm i#!/usr/bin/env python3
