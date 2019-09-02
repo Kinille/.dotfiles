@@ -4,12 +4,13 @@ set number
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-    
+
 " Set indentation standard
 set autoindent
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+set expandtab
 
 " Set wrapping settings
 set wrap!
@@ -34,12 +35,12 @@ autocmd BufNewFile *.py norm o
 
 " Settings if file ends in .py
 au BufNewFile,BufRead *.py
-	\ set autoindent |
-	\ set shiftwidth=4 |
-	\ set tabstop=4 |
-	\ set softtabstop=4 |
+    \ set autoindent |
+    \ set shiftwidth=4 |
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
     \ set textwidth=79 |
-	\ set expandtab 
+    \ set expandtab 
 
 
 """"""""""""""""""""""""""""""""""""""""
