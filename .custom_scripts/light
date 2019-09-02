@@ -1,12 +1,10 @@
 #!/bin/bash
 
-STATE=`wemo -h 192.168.3.120 -a GETSTATE`
-TESTOFF=$'OFF'
-TESTON=$'ON'
-if [ "$STATE" = "$TESTOFF" ]; then
-	wemo -h 192.168.3.120 -a ON > /dev/null
-elif [ "$STATE" = "$TESTON" ]; then
-	wemo -h 192.168.3.120 -a OFF > /dev/null
+STATE=`curl --silent 192.168.3.120:49153/upnp/control/basicevent1 -H "Content-Type: text/xml; charset=utf-8" -H 'SOAPACTION: "urn:Belkin:service:basicevent:1#GetBinaryState"' --data '<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetBinaryState xmlns:u="urn:Belkin:service:basicevent:1" /></s:Body></s:Envelope>' | sed '3!d' | cut -f2 -d'<' | cut -f2 -d'>'`
+if [ "$STATE" = 0 ]; then
+	curl 192.168.3.120:49153/upnp/control/basicevent1 -H "Content-Type: text/xml; charset=utf-8" -H 'SOAPACTION: "urn:Belkin:service:basicevent:1#SetBinaryState"' --data '<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:SetBinaryState xmlns:u="urn:Belkin:service:basicevent:1"><BinaryState>1</BinaryState></u:SetBinaryState></s:Body></s:Envelope>' > /dev/null 2>&1
+elif [ "$STATE" = 1 ]; then
+	curl 192.168.3.120:49153/upnp/control/basicevent1 -H "Content-Type: text/xml; charset=utf-8" -H 'SOAPACTION: "urn:Belkin:service:basicevent:1#SetBinaryState"' --data '<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:SetBinaryState xmlns:u="urn:Belkin:service:basicevent:1"><BinaryState>0</BinaryState></u:SetBinaryState></s:Body></s:Envelope>' > /dev/null 2>&1
 else
 	echo "you made a mistake"
 fi
