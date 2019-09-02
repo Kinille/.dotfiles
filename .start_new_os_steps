@@ -12,8 +12,6 @@ I3
 KeePass2
 Discord
 mailspring (snap install mailspring)
-npm (primarally for wemo)
-wemo (npm install -g belkin-wemo-command-line-tools)
 Curl
 nmap
 keepass2
