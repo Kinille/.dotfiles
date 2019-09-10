@@ -5,6 +5,9 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+" Set encoding to be utf-8
+"set encoding=utf-8
+
 " Set indentation standard
 set autoindent
 set shiftwidth=4
@@ -40,7 +43,8 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set textwidth=79 |
-    \ set expandtab 
+    \ set expandtab |
+    \ set encoding=utf-8
 
 
 """"""""""""""""""""""""""""""""""""""""
