@@ -11,3 +11,5 @@ gocr ### character recognition; ocr; read ### parses pictures for text
 ps aux ### processes; list; pid ### lists running processes with their pid
 ides ### caesar; rotation; cipher ### breaks rotations 1 through 25
 apt-cache show <package> ### information; package ### shows information about package before installing
+du -hs <directory> ### size; file; ### Displays the size of all a directory's contents
+qmv <path> ### rename; bulk ### opens prompt to change filenames in default text editor to right column
