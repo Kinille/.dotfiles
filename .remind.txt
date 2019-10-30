@@ -6,10 +6,17 @@ ins ### nordvpn; status ### self made shortcut to see status of vpn connection
 <command> ; alert ### alert; alarm ### notification when <command> is complete. Optionally no sound with alertn
 locate <filename> ### find; where ### prints the paths with that filename. Might need updatedb
 nmcli ### ipconfig; ifconfig; network; ip ### displays current network card status
-xprop ### properties; window; class ### display window or fond properties of selection
-gocr ### character recognition; ocr; read ### parses pictures for text
-ps aux ### processes; list; pid ### lists running processes with their pid
-ides ### caesar; rotation; cipher ### breaks rotations 1 through 25
+xprop ### properties; window; class ### display window or fond properties of selection for i3wm
+gocr <filename> ### character recognition; ocr; read ### parses images/pictures for text
+ps aux ### processes; list; pid; program ### lists running processes with their pid
+ides "input text" ### caesar; rotation; cipher ### breaks rotations 1 through 25
 apt-cache show <package> ### information; package ### shows information about package before installing
 du -hs <directory> ### size; file; ### Displays the size of all a directory's contents
 qmv <path> ### rename; bulk ### opens prompt to change filenames in default text editor to right column
+<command> | nms ### sneakers, text effect ### gives any input given a decryption effect from sneakers movie
+curl <website> ### internet, web, request ### returns the html of a given website
+wget <website> ### download, non-interactive ### Tool for non-interactive download of online resources
+exiftool -all= <filename> ### metadata, strip, gps ### Strips all metadata from the media file
+uptodate ### update, upgrade, packages ### Custom alias command to update and upgrade quickly
+pavucontrol ### volume, audio, devices ### Volume control for pulse audio sound server
+dig <website url> ### DNS, IP ### Performs a DNS lookup on the requested website
