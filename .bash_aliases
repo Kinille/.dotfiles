@@ -15,6 +15,9 @@ alias python='python3'
 # Check VPN status
 alias ins='nordvpn status'
 
+# Update and upgrade
+alias uptodate='sudo apt update -y; sudo apt upgrade -y'
+
 # Function for making a directory then moving into it
 mkcd ()
 {
