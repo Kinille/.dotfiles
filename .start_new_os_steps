@@ -18,6 +18,8 @@ keepass2
 vlc
 rhythmbox
 network-manager
+anki
+libimage-exiftool-perl
 
 CTF TOOLS:
 peda for gdb
