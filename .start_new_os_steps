@@ -7,6 +7,7 @@ compton
 
 INSTALL THESE PACKAGES:
 vim, vim-gtk
+git
 NordVPN
 I3
 KeePass2
@@ -40,3 +41,6 @@ Add pm-utils package and configure background randomization optionally
 	Add script to /usr/lib/pm-utils/sleep.d/
 	make sure user can use sudoers pm-suspend
 	otherwise change ~/.config/i3/config to have "systemctl suspend" instead of pm-suspend
+Add plug-git plugin manager and any used plugins
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    Add any plugins needed (vimwiki, etc)
