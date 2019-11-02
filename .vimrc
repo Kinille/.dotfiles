@@ -29,8 +29,9 @@ set clipboard=unnamedplus
 """"""""""""""""""""""""""""""""""""""""
 "           Python Specific            "
 """"""""""""""""""""""""""""""""""""""""
+
 " Set <F9> to run python script within vim
-nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
+autocmd FileType python imap <buffer> <F9> <ESC>:w<cr>:exec '!python3' shellescape(@%, 1)<cr>
 
 " auto add shebang when creating a python script
 autocmd BufNewFile *.py norm i#!/usr/bin/env python3
@@ -55,3 +56,19 @@ au BufNewFile,BufRead *.html
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
+
+
+""""""""""""""""""""""""""""""""""""""""
+"            VIM-Plug Stuff            "
+""""""""""""""""""""""""""""""""""""""""
+
+call plug#begin()
+
+Plug 'vimwiki/vimwiki'
+
+call plug#end()
+
+" Settings for vimwiki compatability
+set nocompatible
+filetype plugin on
+syntax on
