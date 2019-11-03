@@ -20,3 +20,4 @@ exiftool -all= <filename> ### metadata, strip, gps ### Strips all metadata from 
 uptodate ### update, upgrade, packages ### Custom alias command to update and upgrade quickly
 pavucontrol ### volume, audio, devices ### Volume control for pulse audio sound server
 dig <website url> ### DNS, IP ### Performs a DNS lookup on the requested website
+scp <User@host:PathToFile> <localPath> ### SSH, download, copy ### Secure copy downloads from ssh
