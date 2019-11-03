@@ -1,5 +1,13 @@
-" Makes the line numbers appear at the left
-set number
+" Set Leader to comma
+:let mapleader="," 
+
+" Turn hybrid line numbers on
+:set number relativenumber
+:set nu rnu
+
+" Highlight other lines as grey
+:highlight LineNr ctermfg=grey
+
 " Sets automatic closing brackets (something I like)
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
