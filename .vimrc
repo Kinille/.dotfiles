@@ -8,6 +8,9 @@
 " Highlight other lines as grey
 :highlight LineNr ctermfg=grey
 
+" Set alt o to map to control o
+:imap <ALT+o> <C-o>
+
 " Sets automatic closing brackets (something I like)
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
@@ -67,6 +70,19 @@ au BufNewFile,BufRead *.html
 
 
 """"""""""""""""""""""""""""""""""""""""
+"             WIKI Specific            "
+""""""""""""""""""""""""""""""""""""""""
+
+au BufNewFile,BufRead *.wiki
+    \ set wrap |
+    \ set linebreak |
+    \ set display+=lastline |
+    \ set breakindent |
+    \ set nocompatible |
+    \ filetype plugin on |
+    \ syntax on
+
+""""""""""""""""""""""""""""""""""""""""
 "            VIM-Plug Stuff            "
 """"""""""""""""""""""""""""""""""""""""
 
@@ -77,6 +93,6 @@ Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Settings for vimwiki compatability
-set nocompatible
-filetype plugin on
-syntax on
+" Change default wiki location
+let g:vimwiki_list = [{'path': '~/.wwiki/'}]
+ 
