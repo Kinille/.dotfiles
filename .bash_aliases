@@ -1,7 +1,14 @@
 alias top="htop"
 alias webserv="ssh pi@192.168.3.102"
+alias webservx="ssh pi@69.169.170.91"
 alias li="light"
+
+# Manage dotfiles version control
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# Manage personal wiki version control
+alias diary="/usr/bin/git --git-dir=$HOME/.wwiki/.git --work-tree=$HOME/.wwiki"
+alias di='diary'
 
 # ls Stuff
 alias ls='ls -Isnap --color=auto'
@@ -31,6 +38,9 @@ cs ()
 	cd "$@" &&
 	ls
 }
+
+# Alias rm to use trash client to possibly recover files
+alias rm=trash
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
