@@ -234,11 +234,14 @@ bindsym Control+Menu exec ~/.custom_scripts/light
 bindsym F10 exec ~/.custom_scripts/light
 
 # Increment custom clicker by 1 using script
-bindsym F12 exec python ~/.custom_scripts/clicker/click.py
+bindsym F12 exec ~/.custom_scripts/clicker/click.py
 # Report Clicker Figure
 bindsym Control+m exec notify-send --urgency=low --expire-time=750 "$(cat ~/.custom_scripts/clicker/clickerFigure.txt )"
 # Reset Clicker to Zero
 bindsym Control+Shift+m exec echo "0" > ~/.custom_scripts/clicker/clickerFigure.txt
+
+# Set shortcut to use script that copies the current date into the system clipboard
+bindsym $mod+Shift+d exec ~/.custom_scripts/dateToClipboard.py
 
 # Set start menu
 bindsym $mod+d exec dmenu_run
