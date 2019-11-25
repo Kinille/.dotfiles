@@ -87,7 +87,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+p focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -132,12 +132,6 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 assign [class="discord"] $workspace8
 assign [class="Rhythmbox"] $workspace10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -213,19 +207,50 @@ bar {
 		}
 }
 
-bindsym $mod+shift+x exec i3lock --color "$dark-bar" -b
-bindsym Control+Menu exec ~/.custom_scripts/light
-bindsym $mod+d exec dmenu_run
-bindsym $mod+Delete exec "i3lock --color '$dark-bar' --show-failed-attempt;  sudo pm-suspend"
-
+# Starts programs on startup
 exec --no-startup-id i3-msg 'workspace $workspace1; exec firefox'
 exec --no-startup-id i3-msg 'workspace $workspace2; exec gnome-terminal'
 #exec --no-startup-id i3-msg 'workspace $workspace3; exec discord'
 #exec --no-startup-id i3-msg 'workspace $workspace8; exec mailspring'
 exec --no-startup-id i3-msg 'workspace $workspace9; exec nautilus'
 exec --no-startup-id i3-msg 'workspace $workspace10; exec rhythmbox'
+# Enables numlockx key on startup
+exec --no-startup-id numlockx on
 
 # Set wallpaper
 exec_always feh --randomize --bg-fill /home/kinille/Pictures/Backgrounds/
 # Set workspace transition effect
 exec_always compton -f
+
+###################################################
+#          Hotkeys To Control Everything          #
+###################################################
+# Set Rhythmbox Controls
+bindsym Control+p exec rhythmbox-client --play-pause
+bindsym Control+Right exec rhythmbox-client --next
+bindsym Control+Left exec rhythmbox-client --previous
+# Set lightswitch
+bindsym Control+Menu exec ~/.custom_scripts/light
+bindsym F10 exec ~/.custom_scripts/light
+
+# Increment custom clicker by 1 using script
+bindsym F12 exec python ~/.custom_scripts/clicker/click.py
+# Report Clicker Figure
+bindsym Control+m exec notify-send --urgency=low --expire-time=750 "$(cat ~/.custom_scripts/clicker/clickerFigure.txt )"
+# Reset Clicker to Zero
+bindsym Control+Shift+m exec echo "0" > ~/.custom_scripts/clicker/clickerFigure.txt
+
+# Set start menu
+bindsym $mod+d exec dmenu_run
+# Set logout options
+bindsym $mod+shift+x exec i3lock --color "$dark-bar" -b
+bindsym $mod+Delete exec "i3lock --color '$dark-bar' --show-failed-attempt;  sudo pm-suspend"
+# reload the configuration file
+bindsym $mod+Shift+c reload 
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Take screenshot with flameshot
+bindsym $mod+End exec "flameshot gui"
