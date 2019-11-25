@@ -6,7 +6,7 @@ ins ### nordvpn; status ### self made shortcut to see status of vpn connection
 <command> ; alert ### alert; alarm ### notification when <command> is complete. Optionally no sound with alertn
 locate <filename> ### find; where ### prints the paths with that filename. Might need updatedb
 nmcli ### ipconfig; ifconfig; network; ip ### displays current network card status
-xprop ### properties; window; class ### display window or fond properties of selection for i3wm
+xprop ### program; id; properties; window; class ### display window or fond properties of selection for i3wm
 gocr <filename> ### character recognition; ocr; read ### parses images/pictures for text
 ps aux ### processes; list; pid; program ### lists running processes with their pid
 ides "input text" ### caesar; rotation; cipher ### breaks rotations 1 through 25
@@ -21,3 +21,8 @@ uptodate ### update, upgrade, packages ### Custom alias command to update and up
 pavucontrol ### volume, audio, devices ### Volume control for pulse audio sound server
 dig <website url> ### DNS, IP ### Performs a DNS lookup on the requested website
 scp <User@host:PathToFile> <localPath> ### SSH, download, copy ### Secure copy downloads from ssh
+<ctrl>-r ### bash; history; reverse search ### Does a reverse search of commands entered
+<input> | wc -l ### line; count ### counts the number of lines in a document or STDin
+xev | event; x events ### prints the contents of whatever event is being unput
+sudo apt purge --auto-remove <packageName> | ### remove package completely ### Removes package and dependecies
+eog <filename> ### eye of gnome; picture; view ### Opens view of picture file
