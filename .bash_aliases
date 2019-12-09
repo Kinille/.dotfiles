@@ -25,19 +25,29 @@ alias ins='nordvpn status'
 # Update and upgrade
 alias uptodate='sudo apt update -y; sudo apt upgrade -y'
 
-# Function for making a directory then moving into it
+# Function for making a directory then moving into it named for mkdir cd
 mkcd ()
 {
     mkdir -p -- "$1" &&
       cd -P -- "$1"
 }
 
-# Function to move into a directory and immediately list its contents
+# Function to move into a directory and immediately list its contents named for cd ls
 cs ()
 {
 	cd "$@" &&
 	ls
 }
+
+# Function to create a python3 file with shebang and execution permissions (Named for python-create)
+pc ()
+{
+    touch "$@".py &&
+    chmod +x "$@".py &&
+    echo -e "#!/usr/bin/env python3\n\n" >> "$@".py &&
+    vim -c 'startinsert' +3 "$@".py
+}
+
 
 # Alias rm to use trash client to possibly recover files
 alias rm=trash
