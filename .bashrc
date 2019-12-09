@@ -102,6 +102,8 @@ fi
 if [ -d ~/.custom_scripts ]; then
 	export PATH="$HOME/.custom_scripts:$PATH"
 fi
+# Set vim mode to bash prompt
+set -o vi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
