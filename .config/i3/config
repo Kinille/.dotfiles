@@ -207,13 +207,17 @@ bar {
 		}
 }
 
+# Remove title bar on unstacked windows
+new_window 1pixel
+
+
 # Starts programs on startup
 exec --no-startup-id i3-msg 'workspace $workspace1; exec firefox'
 exec --no-startup-id i3-msg 'workspace $workspace2; exec gnome-terminal'
 #exec --no-startup-id i3-msg 'workspace $workspace3; exec discord'
 #exec --no-startup-id i3-msg 'workspace $workspace8; exec mailspring'
 exec --no-startup-id i3-msg 'workspace $workspace9; exec nautilus'
-exec --no-startup-id i3-msg 'workspace $workspace10; exec rhythmbox'
+#exec --no-startup-id i3-msg 'workspace $workspace10; exec rhythmbox'
 # Enables numlockx key on startup
 exec --no-startup-id numlockx on
 
