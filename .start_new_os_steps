@@ -21,6 +21,7 @@ rhythmbox
 network-manager
 anki
 libimage-exiftool-perl
+python3-venv
 
 CTF TOOLS:
 peda for gdb
