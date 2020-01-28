@@ -3,6 +3,9 @@ alias webserv="ssh pi@192.168.3.102"
 alias webservx="ssh pi@69.169.170.91"
 alias li="light"
 
+#Set nload options to wifi device and 2000 kbps max for graph
+alias nload="nload -i 3500 wlp2s0"
+
 # Manage dotfiles version control
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
@@ -18,6 +21,10 @@ alias l='ls -CF'
 
 # Default to Python 3
 alias python='python3'
+alias pip='pip3'
+
+# Enter python environment
+alias entenv='source env/bin/activate'
 
 # Check VPN status
 alias ins='nordvpn status'
