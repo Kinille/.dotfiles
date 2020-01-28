@@ -98,10 +98,15 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 #Adds custom scripts in home folder to path if they exist
-
 if [ -d ~/.custom_scripts ]; then
 	export PATH="$HOME/.custom_scripts:$PATH"
 fi
+
+if [ -d ~/.rbenv/bin ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
 # Set vim mode to bash prompt
 set -o vi
 
