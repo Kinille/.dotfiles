@@ -34,6 +34,7 @@ stegsolver.jar (default-jre openjdk-11-jre-headless openjdk-8-jre-headless)
 exif
 bsdgames
 wireshark
+tesseract-ocr AND/OR gocr
 
 MISC:
 auto use ssh key for access to github
