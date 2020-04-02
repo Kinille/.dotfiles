@@ -52,8 +52,17 @@ pc ()
     touch "$@".py &&
     chmod +x "$@".py &&
     echo -e "#!/usr/bin/env python3\n\n" >> "$@".py &&
-    vim -c 'startinsert' +3 "$@".py
+    subl "$@".py
 }
+# This one is name for python create sublime
+pcs ()
+{
+    touch "$@".py &&
+    chmod +x "$@".py &&
+    echo -e "#!/usr/bin/env python3\n\n" >> "$@".py &&
+    subl "$@".py:3
+}
+alias pykill='ps aux| grep .py'
 
 
 # Alias rm to use trash client to possibly recover files
@@ -67,6 +76,3 @@ alias alertn='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || ech
 
 # For a relaxing bash experience
 alias please='sudo'
-
-# Randomize background
-alias newbg='feh --randomize --bg-scale ~/Pictures/Backgrounds/'
