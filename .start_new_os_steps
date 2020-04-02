@@ -21,6 +21,7 @@ rhythmbox
 network-manager
 anki
 libimage-exiftool-perl
+magic-wormhole
 python3-venv
 
 CTF TOOLS:
@@ -35,6 +36,7 @@ exif
 bsdgames
 wireshark
 tesseract-ocr AND/OR gocr
+hexedit OR bless
 
 MISC:
 auto use ssh key for access to github
