@@ -225,7 +225,7 @@ exec --no-startup-id numlockx on
 exec --no-startup-id setxkbmp -option caps:escape
 
 # Set wallpaper
-exec_always feh --randomize --bg-fill /home/kinille/Pictures/Backgrounds/
+exec_always feh --randomize --bg-fill /home/kinille/Pictures/Backgrounds/ /home/kinille/Pictures/Backgrounds/data-stunning/images
 # Set workspace transition effect
 exec_always compton -f
 
@@ -247,8 +247,8 @@ bindsym Control+m exec notify-send --urgency=low --expire-time=750 "$(cat ~/.cus
 # Reset Clicker to Zero
 bindsym Control+Shift+m exec echo "0" > ~/.custom_scripts/clicker/clickerFigure.txt
 
-# Set shortcut to use script that copies the current date into the system clipboard
-bindsym $mod+Shift+d exec ~/.custom_scripts/dateToClipboard.py
+# Short python script that pastes the current date
+bindsym $mod+Shift+d exec ~/.custom_scripts/pasteCurrentDate.py
 
 # Set shortcut to toggle mute of laptop speaker
 bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
@@ -258,6 +258,8 @@ bindsym $mod+d exec dmenu_run
 # Set logout options
 bindsym $mod+shift+x exec i3lock --color "$dark-bar" -b
 bindsym $mod+Delete exec "i3lock --color '$dark-bar' --show-failed-attempt;  sudo pm-suspend"
+bindsym $mod+shift+Delete exec "i3lock --color '$dark-bar' --show-failed-attempt;  sudo pm-hibernate"
+
 # reload the configuration file
 bindsym $mod+Shift+c reload 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
