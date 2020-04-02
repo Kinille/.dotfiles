@@ -16,17 +16,21 @@ qmv <path> ### rename; bulk ### opens prompt to change filenames in default text
 <command> | nms ### sneakers, text effect ### gives any input given a decryption effect from sneakers movie
 curl <website> ### internet, web, request ### returns the html of a given website
 wget <website> ### download, non-interactive ### Tool for non-interactive download of online resources
-exiftool -all= <filename> ### metadata, strip, gps ### Strips all metadata from the media file
+exiftool -all= <filename> ### tags, image, metadata, strip, gps ### Strips all metadata from the media file
 uptodate ### update, upgrade, packages ### Custom alias command to update and upgrade quickly
 pavucontrol ### volume, audio, devices ### Volume control for pulse audio sound server
 dig <website url> ### DNS, IP ### Performs a DNS lookup on the requested website
 scp <User@host:PathToFile> <localPath> ### SSH, download, copy ### Secure copy downloads from ssh
 <ctrl>-r ### bash; history; reverse search ### Does a reverse search of commands entered
 <input> | wc -l ### line; count ### counts the number of lines in a document or STDin
-xev | event; x events ### prints the contents of whatever event is being unput
+xev | event; keyboard; window; x events ### prints the contents of whatever event is being unput
 sudo apt purge --auto-remove <packageName> | ### remove package completely ### Removes package and dependecies
 eog <filename> ### eye of gnome; picture; view ### Opens view of picture file
-uname -a ### system, machine, os, operating system, kernel, architecture ### print system information
+uname -a ### system, version, machine, os, operating system, kernel, architecture ### print system information
 lshw ### hardware, dxdiag, hard ware ### lists hardware on machine (should use as superuser)
 upower -d ### battery, life ### dumps battery information
 espeak ### speech, text-to-speach, voice ### Simple speach synthesizer
+cd - / cd $OLDPWD ### previous, directory, go back ### change directory to last PWD
+hexedit (xxd is a viewer) ### hex, editor, binary ### Easy terminal hex editor, see "bless" program for more features
+nmap ### network, scan, ports, ### scans ports in network. zenmap for gui
+wormhole send/receive ### file transfer ### Sends files quickly with passphrase (--code-length WORDS, --verify)
